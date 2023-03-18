@@ -1,20 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Anjay App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item fill="outline">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="form.email" [ngModelOptions]="{standalone : true}" placeholder="Your email" type="email"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item fill="outline">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="form.password" [ngModelOptions]="{standalone : true}" placeholder="Your password" type="password"></ion-input>
+    </ion-item>
+    <ion-button (click)="doLogin()" expand="block" color="light">Process</ion-button>
   </div>
 </ion-content>
